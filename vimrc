@@ -33,15 +33,22 @@ syntax on
 colorscheme sourcerer
 set background=dark    " Setting dark mode
 set ruler
+set tabstop=4 shiftwidth=4 expandtab
+
+let hostname = substitute(system('hostname'), '\n', '', '')
 
 if has("gui_running")
-  125 vsplit
 
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
     set guifont=Liberation\ Mono:h14
-	set lines=75	 columns=250
+    if hostname == "owensd-mbp.local"
+      set lines=50 columns=125 
+    else
+	  set lines=75	 columns=250
+      125 vsplit
+    endif
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
   endif
