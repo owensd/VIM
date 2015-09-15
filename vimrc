@@ -48,9 +48,9 @@ if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
-    set guifont=Liberation\ Mono:h14
+    set guifont=Liberation\ Mono:h12
     if hostname == "owensd-mbp.local"
-      set lines=50 columns=125 
+      set lines=60 columns=125 
     else
 	  set lines=75	 columns=250
       125 vsplit
