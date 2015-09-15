@@ -3,6 +3,12 @@ call plug#begin('~/.vim/plugged')
 " Color Scheme
 Plug 'morhetz/gruvbox'
 
+" Swift Support
+Plug 'keith/swift.vim'
+
+" xctool support
+Plug 'brow/vim-xctool'
+
 " Make sure you use single quotes
 " Plug 'junegunn/seoul256.vim'
 " Plug 'junegunn/vim-easy-align'
@@ -53,3 +59,14 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
+
+set wrap "turn on line wrapping
+set wrapmargin=8 " wrap lines when coming within n characters from side
+"set linebreak " set soft wrapping
+"set showbreak=… " show ellipsis at breaking
+
+set autoindent " automatically set indent of new line
+set smartindent
+
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
