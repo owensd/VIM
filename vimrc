@@ -60,6 +60,9 @@ if has("gui_running")
   endif
 endif
 
+" Setup xctool for various file types
+au BufEnter *.swift,*.m,*.mm compiler xctool
+
 set wrap "turn on line wrapping
 set wrapmargin=8 " wrap lines when coming within n characters from side
 "set linebreak " set soft wrapping
