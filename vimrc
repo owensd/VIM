@@ -52,7 +52,8 @@ if has("gui_running")
     if hostname == "owensd-mbp.local"
       set lines=60 columns=125 
     else
-	  set lines=75	 columns=250
+      set guifont=Liberation\ Mono:h14
+	  set lines=80	 columns=250
       125 vsplit
     endif
   elseif has("gui_win32")
@@ -61,7 +62,7 @@ if has("gui_running")
 endif
 
 " Setup xctool for various file types
-au BufEnter *.swift,*.m,*.mm compiler xctool
+au BufEnter *.swift,*.m,*.mm compiler gcc 
 
 set wrap "turn on line wrapping
 set wrapmargin=8 " wrap lines when coming within n characters from side
@@ -70,6 +71,8 @@ set wrapmargin=8 " wrap lines when coming within n characters from side
 
 set autoindent " automatically set indent of new line
 set smartindent
+
+set autowrite
 
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
