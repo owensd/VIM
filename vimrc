@@ -50,7 +50,8 @@ if has("gui_running")
   elseif has("gui_macvim")
     set guifont=Liberation\ Mono:h12
     if hostname == "owensd-mbp.local"
-      set lines=60 columns=125 
+      set lines=60 columns=203 
+      101 vsplit
     else
       set guifont=Liberation\ Mono:h14
 	  set lines=80	 columns=250
@@ -65,9 +66,9 @@ endif
 au BufEnter *.swift,*.m,*.mm compiler gcc 
 
 set wrap "turn on line wrapping
-set wrapmargin=8 " wrap lines when coming within n characters from side
-"set linebreak " set soft wrapping
-"set showbreak=… " show ellipsis at breaking
+set nolist
+set linebreak " set soft wrapping
+set showbreak=… " show ellipsis at breaking
 
 set autoindent " automatically set indent of new line
 set smartindent
